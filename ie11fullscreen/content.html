@@ -3,8 +3,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title></title>
+        <title>IE 11 Fullscreen Test</title>
 
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css" />
         <style type="text/css">
             #content {
                 position: relative;
@@ -12,7 +13,7 @@
                 width:  100%;
                 height:  100%;
             }
-
+            
             #box {
                 display: block;
                 position: relative;
@@ -25,8 +26,8 @@
         </style>
     </head>
     <body>
-        <p>This page demonstrates a bug in IE 11 fullscreen mode.</p>
-        <div id="content">            
+        <div id="content">
+            <p>This page demonstrates a bug in IE 11 fullscreen mode.</p>
             <a href="#" id="box">Click Me!</a>
             <p>Client Width: <span id="cw"></span></p>
             <p>Offset Width: <span id="ow"></span></p>    
@@ -73,8 +74,8 @@
                 update();
                 setInterval(update, 50);
 
-                if (!screenfull.enabled) {                    
-                    $(box).replaceWith("<div id='box'>Your browser does not support the fullscreen API.</div>");
+                if (!screenfull.enabled) {
+                    box = $(box).replaceWith("<div id='box'>Your browser does not support the fullscreen API.</div>");
                 } else {
                     $(box).click(function () {
                         screenfull.toggle(content[0]);
