@@ -1,0 +1,6 @@
+---
+layout: default
+title: Christopher Currie
+class: writing
+---
+<div class="panel panel-default"><div class="panel-body"><p>Assorted writings that I can still stand to read.</p><ul class="list-group">{% for post in site.posts %}<a href="{{ post.url }}" class="list-group-item"><i class="pull-right">{{ post.date | date_to_string }}</i>{{ post.title }}</a>{% endfor %}</ul></div></div>

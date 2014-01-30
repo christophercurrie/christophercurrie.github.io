@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: white;
+  background-color: #3d3d3d;
+  height: 100%;
+  width: 100%;
+}
+body.home {
+  background: url('/img/bw-splash.png') no-repeat right bottom / cover;
+}
+a,
+a:hover,
+a:focus {
+  color: white;
+  text-decoration: none;
+}
+.nav li a:hover,
+.nav li a:focus {
+  background-color: #7d8182;
+}
+.panel {
+  color: black;
+}
+.panel a,
+.panel a:hover,
+.panel a:focus {
+  color: black;
+}
