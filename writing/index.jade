@@ -1,16 +1,16 @@
 | ---
-| layout: default
+| layout: panelled
 | title: Christopher Currie
 | class: writing
 | ---
-| <div class="panel panel-default">
-.panel-body
-  p Assorted writings that I can still stand to read.
+//- This newline is here to separate the front-matter from the HTML. Don't remove it.
+= '\n'
 
-  ul.list-group
-    | {% for post in site.posts %}
-    a.list-group-item(href="{{ post.url }}")
-      i.pull-right {{ post.date | date_to_string }}
-      | {{ post.title }}
-    | {% endfor %}
-| </div>
+p Assorted writings that I can still stand to read.
+
+ul.list-group
+  | {% for post in site.posts %}
+  a.list-group-item(href="{{ post.url }}")
+    i.pull-right {{ post.date | date_to_string }}
+    | {{ post.title }}
+  | {% endfor %}
