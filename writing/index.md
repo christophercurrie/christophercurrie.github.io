@@ -1,7 +1,7 @@
 ---
 layout: panelled
 title: Writing
-class: writing_md
+class: writing
 ---
 
 {% for entry in site.categories %}

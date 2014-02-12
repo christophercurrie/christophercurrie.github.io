@@ -6,20 +6,31 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    //link(rel="stylesheet", type="text/css", href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css")
     link(rel="stylesheet", type="text/css", href="{{site.url}}/styles/site.css")
-    link(rel="stylesheet", type="text/css", href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/flatly/bootstrap.min.css")
 
-    body(class="{{page.class}}")
-    div#content.container
-      .page-header: h1: a(href="{{site.url}}/") Christopher Currie
-      .row
-        .col-md-2
-          ul.nav.nav-pills.nav-stacked
-            li: a(href="/writing/") Writing
-            li: a(href="/music/") Music
-            li: a(href="/code/") Software
+  body(class="{{page.class}}")
+    #wrap
+      div#content.container
+        .page-header: h1: a(href="{{site.url}}/") Christopher Currie
+        .row
+          .col-md-2
+            ul.nav.nav-pills.nav-stacked
+              li: a(href="/writing/") Writing
+              li: a(href="/music/") Music
+              li: a(href="/code/") Software
 
-        .col-md-10
-          | {{content}}
+          .col-md-10
+            | {{content}}
+
+      #push
+    #footer
+      .container
+        p
+         a(href="https://www.facebook.com/christopher.currie") f
+         | &nbsp;|&nbsp;
+         a(href="http://www.linkedin.com/in/christophercurrie/") in
+         | &nbsp;|&nbsp;
+         a(href="https://twitter.com/chriscurrie") t
+
+
     script(type="text/javascript", source="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js")

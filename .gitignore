@@ -1,5 +1,6 @@
 .idea/
 _site/
+bower_components/
 Gemfile.lock
 *.iml
 

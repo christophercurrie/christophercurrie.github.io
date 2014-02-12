@@ -1,4 +1,10 @@
+@import '../bower_components/bootstrap/less/bootstrap.less';
+@import 'variables.less';
+@import '../bower_components/bootswatch/global/global.less';
+@import 'bootswatch.less';
+@import '../bower_components/bootstrap/less/utilities.less';
 
+//@navbar-default-bg:                hsl(0,0%,34%);
 
 html {
   height: 100%;
@@ -6,8 +12,6 @@ html {
 }
 
 body {
-  color: white;
-  background-color: hsl(0,0%,24%);
   height: 100%;
   width: 100%;
 
@@ -16,24 +20,58 @@ body {
   }
 }
 
-a, a:hover, a:focus {
-  color: white;
+a, a:hover, a:active {
+  color: inherit;
   text-decoration: none;
 }
 
-.nav li {
-  a:hover, a:focus {
-    background-color: hsl(192, 2%, 50%);
+.nav-pills {
+
+  & > li > a {
+    &:hover {
+      color: @gray-darker;
+    }
   }
 }
 
 .panel {
-  color: black;
-  a, a:hover, a:focus {
-    color: #207c98;
+  color: @panel-default-text;
+  &-default > .panel-heading {
+    background-color: @table-bg-hover;
+    color: @panel-default-text;
   }
 }
 
-//.writing_md {
-//
-//}
+@footer-height: 60px;
+@footer-spacing: 20px;
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -@footer-height;
+}
+
+#push,
+#footer {
+  height: @footer-height;
+}
+
+@media (max-width: @screen-xs-max) {
+  #footer {
+    margin-left: -@footer-spacing;
+    margin-right: -@footer-spacing;
+    padding-left: @footer-spacing;
+    padding-right: @footer-spacing;
+  }
+}
+
+.writing {
+  .panel-body ul {
+    .list-group;
+    li {
+      .list-group-item;
+      em { .pull-right; }
+    }
+  }
+}
