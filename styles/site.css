@@ -5971,7 +5971,10 @@ body {
   width: 100%;
 }
 body.home {
-  background: url('/img/bw-splash.png') no-repeat right bottom / cover;
+  background-image: url('/img/bw-splash.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
 }
 a,
 a:hover,
