@@ -3,4 +3,4 @@ _site/
 bower_components/
 Gemfile.lock
 *.iml
-
+*.map
