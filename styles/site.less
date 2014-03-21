@@ -21,8 +21,14 @@ body {
 }
 
 a, a:hover, a:active {
-  color: inherit;
+  color: @brand-info;
   text-decoration: none;
+}
+
+h1, .nav {
+  a, a:hover, a:active {
+    color: inherit;
+  }
 }
 
 .nav-pills {

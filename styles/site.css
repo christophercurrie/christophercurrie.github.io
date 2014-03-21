@@ -5976,8 +5976,16 @@ body.home {
 a,
 a:hover,
 a:active {
-  color: inherit;
+  color: #5bc0de;
   text-decoration: none;
+}
+h1 a,
+.nav a,
+h1 a:hover,
+.nav a:hover,
+h1 a:active,
+.nav a:active {
+  color: inherit;
 }
 .nav-pills > li > a:hover {
   color: #222222;

@@ -6,82 +6,50 @@
         <title>IE 11 Fullscreen Test</title>
 
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css" />
-        <style type="text/css">
-            #content {
-                position: relative;
-                background: white;
-                width:  100%;
-                height:  100%;
-            }
-            
-            #box {
-                display: block;
-                position: relative;
-                width: 100%;
-                height: 200px;
-                text-align: center;
-                line-height: 200px;
-                background: orange;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="/styles/site.css" />
     </head>
-    <body>
-        <div id="content">
-            <p>This page demonstrates a bug in IE 11 fullscreen mode.</p>
-            <a href="#" id="box">Click Me!</a>
-            <p>Client Width: <span id="cw"></span></p>
-            <p>Offset Width: <span id="ow"></span></p>    
-            <p>Client Height: <span id="ch"></span></p>
-            <p>Offset Height: <span id="oh"></span></p>
-            <p>Bounding Client Rect:</p>
-            <ul>
-                <li>Top: <span id="top"></span></li>
-                <li>Right: <span id="right"></span></li>
-                <li>Bottom: <span id="bottom"></span></li>
-                <li>Left: <span id="left"></span></li>
-            </ul>
+    <body style="background: white; color: black;">
+        <div id="fsexample" style="border: 1px solid black; padding: 10px">
+            <div style="position: relative; background: white; width:  100%;">
+                <table width="100%">
+                    <tr>
+                        <td width="25%">
+                            <div style="padding-right: 20px">
+                                <a href="#" id="box" style="display: block; position: relative; width: 100%; height: 200px; text-align: center; line-height: 200px; background: #575757;">Click Me!</a>
+                            </div>
+                        </td>
+                        <td width="25%">
+                            <p>clientWidth: <span class="cw">&nbsp;</span></p>
+                            <p>clientHeight: <span class="ch">&nbsp;</span></p>
+                            <p>&nbsp;</p>
+                            <p>offsetWidth: <span class="ow">&nbsp;</span></p>
+                            <p>offsetHeight: <span class="oh">&nbsp;</span></p>
+                        </td>
+                        <td width="25%">
+                            <p>Bounding Client Rect:</p>
+                            <ul>
+                                <li>Top: <span class="top">&nbsp;</span></li>
+                                <li>Right: <span class="right">&nbsp;</span></li>
+                                <li>Bottom: <span class="bottom">&nbsp;</span></li>
+                                <li>Left: <span class="left">&nbsp;</span></li>
+                            </ul>
+                        </td>
+                        <td width="25%">
+                            <p>jquery 2.1.0:</p>
+                            <ul>
+                                <li>innerWidth: <span class="jqiw">&nbsp;</span></li>
+                                <li>outerWidth: <span class="jqow">&nbsp;</span></li>
+                                <li>innerHeight: <span class="jqih">&nbsp;</span></li>
+                                <li>outerHeight: <span class="jqoh">&nbsp;</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <script type="text/javascript" src="screenfull.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-                var content = $("#content"),
-                    box = $("#box")[0],
-                    cw = $("#cw"),
-                    ow = $("#ow"),
-                    ch = $("#ch"),
-                    oh = $("#oh"),
-                    top = $("#top"),
-                    right = $("#right"),
-                    bottom = $("#bottom"),
-                    left = $("#left"),
-
-                    update = function () {
-                        var rect = box.getBoundingClientRect();
-
-                        cw.text(box.clientWidth);
-                        ow.text(box.offsetWidth);
-                        ch.text(box.clientHeight);
-                        oh.text(box.offsetHeight);
-
-                        top.text(rect.top);
-                        right.text(rect.right);
-                        bottom.text(rect.bottom);
-                        left.text(rect.left);
-                    };
-
-                update();
-                setInterval(update, 50);
-
-                if (!screenfull.enabled) {
-                    box = $(box).replaceWith("<div id='box'>Your browser does not support the fullscreen API.</div>");
-                } else {
-                    $(box).click(function () {
-                        screenfull.toggle(content[0]);
-                    });
-                }
-            })();
-        </script>
+        <script type="text/javascript" src="fullscreen-test.js"></script>
     </body>
 </html>
