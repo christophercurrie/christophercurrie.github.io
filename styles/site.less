@@ -1,10 +1,6 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 @import 'variables.less';
-@import '../bower_components/bootswatch/global/global.less';
 @import 'bootswatch.less';
-@import '../bower_components/bootstrap/less/utilities.less';
-
-//@navbar-default-bg:                hsl(0,0%,34%);
 
 html {
   height: 100%;
@@ -16,10 +12,29 @@ body {
   width: 100%;
 
   &.home {
-    background-image: url('/img/bw-splash.png');
+    background-image: url('/img/bw-splash-xs.png');
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;
+  }
+}
+
+// larger backgrounds for larger screens
+@media (min-width: @screen-sm-min) {
+  body.home {
+    background-image: url('/img/bw-splash-sm.png');
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  body.home {
+    background-image: url('/img/bw-splash-md.png');
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  body.home {
+    background-image: url('/img/bw-splash-lg.png');
   }
 }
 
