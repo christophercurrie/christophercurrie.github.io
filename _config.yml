@@ -1,4 +1,4 @@
 exclude: ['*.jade','*.less','bower.json','bower_components','vendor']
 markdown: kramdown
 timezone: America/Los_Angeles
-
+url: 'https://www.christophercurrie.com'
