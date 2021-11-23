@@ -1,0 +1,22 @@
+{
+  "name": "christophercurrie.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "pug": "cd _layouts && pug3 ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophercurrie/christophercurrie.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christophercurrie/christophercurrie.github.io/issues"
+  },
+  "homepage": "https://github.com/christophercurrie/christophercurrie.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@anduh/pug-cli": "^1.0.0-alpha8"
+  }
+}

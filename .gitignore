@@ -2,7 +2,7 @@
 .idea/
 .ruby-version
 _site/
-bower_components/
+node_modules/
 vendor/
 Gemfile.lock
 *.iml
