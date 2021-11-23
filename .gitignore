@@ -3,7 +3,6 @@
 .ruby-version
 _site/
 node_modules/
-vendor/
 Gemfile.lock
 *.iml
 *.map
