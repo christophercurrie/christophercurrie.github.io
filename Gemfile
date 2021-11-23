@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll', '=1.5.1'
+gem 'jekyll', '>= 3.6.3'
 gem 'github-pages', '=17'
 gem 'wdm'
 
