@@ -1,4 +1,4 @@
-exclude: ['*.jade','*.less','package.json','package-lock.json','node_modules']
+exclude: ['*.pug','*.less','package.json','package-lock.json','node_modules']
 markdown: kramdown
 timezone: America/Los_Angeles
 url: 'https://www.christophercurrie.net'
